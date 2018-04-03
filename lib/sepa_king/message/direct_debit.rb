@@ -42,7 +42,7 @@ module SEPA
             end
             builder.SeqTp(group[:sequence_type])
           end
-          builder.ReqdColltnDt(group[:requested_date].iso8601)
+          builder.ReqdColltnDt(group[:requested_date].strftime('%Y-%m-%d'))
           builder.Cdtr do
             builder.Nm(group[:account].name)
           end
